@@ -1,35 +1,21 @@
 # projet-infra
 Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de Infraestrutura e Serviços Web.
 
-##Estrutura do projeto:
-projeto-infra/
-├── frontend/
-│   ├── Dockerfile
-│   └── src/      //foi aproveitado o trabalho de IHM para exemplo deste projeto
-│       └── index.html
-|       └── css
-|       └── img
-|       └── javascript
-|       └── importancia.html
-|       └── obrigado.html
-|       └── diferencial.html
-|       └── servico.html
-|       └── contato.html
-├── backend/
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── app/
-│       └── main.py
-├── database/
-│   └── Dockerfile
-└── ansible/
-    └── playbook.yml
+## Estrutura do projeto:
+![](estruturaProj.png)
 
-##Requisitos:
--Docker
--Ansible
+## Como funciona este projeto?
+![Diagrama de requisições](diagramaReq.png)
+- Os contêiners rodam de forma separada e se comunicam através de uma mesma rede.
+- O usuário requisita a aplicação Web por algum navegador, usando HTTP, e o frontend recebe esta requisição e processa a lógica da interface, fazendo outras requisições para o backend para obter dados.
+- Já o backend recebe esta requisição do frontend, processa a lógica de negócio, acessa o banco de dados para buscar/armazenar algo, e retorna a resposta HTTP para frontend.
+- O backend envia a resposta HTTP para o frontend, que a processa e a exibe para o usuário no navegador.
 
-##Comandos essenciais para executar o projeto:
+## Requisitos:
+- Docker
+- Ansible
+
+## Comandos essenciais para executar o projeto:
 1. Criando a rede "net"
 sudo docker network create net
 
