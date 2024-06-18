@@ -2,7 +2,7 @@
 Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de Infraestrutura e Serviços Web.
 
 ## Estrutura do projeto:
-![](estruturaProj.png)
+![O projeto utilizado pode ser encontrado aqui: https://replit.com/@JuliaSchaedler/TrabalhoIHM](estruturaProjInfra.png)
 
 ## Como funciona este projeto?
 ![Diagrama de requisições](diagramaReq.png)
@@ -41,5 +41,4 @@ Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de I
 - sudo ansible-playbook ansible/playbook.yml //no diretório "projeto-infra"
 
 6. Acessando a página Web: http://localhost
-
 
