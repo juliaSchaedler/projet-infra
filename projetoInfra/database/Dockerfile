@@ -1,9 +1,10 @@
-#imagem oficial do MySQL
-FROM mysql:latest
+FROM mysql:8.0
 
-#variáveis de ambiente para o banco de dados
-ENV MYSQL_ROOT_PASSWORD=root
+# Variáveis de ambiente para configurar o MySQL
+ENV MYSQL_ROOT_PASSWORD=rootpassword
 ENV MYSQL_DATABASE=mydatabase
 
-# Exponha a porta 3306
-EXPOSE 3306
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=password
+
+
