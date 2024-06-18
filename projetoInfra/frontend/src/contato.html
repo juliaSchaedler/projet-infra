@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>ResiduoZero</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/header.css" rel="stylesheet" type="text/css" />
+	<link href="css/contato.css" rel="stylesheet" type="text/css" />
+	<link href="css/footer.css" rel="stylesheet" type="text/css" />
+	
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<script src="javascript/header-script.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+
+			<ul class="sidebar">
+				<li onclick="hideSideBar()"><img id="nav-icon-close" src="img/menu-icon-close.png"></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="servico.html">Serviços</a></li>
+				<li><a href="diferencial.html">Nosso Diferencial</a></li>
+				<li><a href="importancia.html">Importância</a></li>
+				<li><a href="contato.html">Contato</a></li>
+			</ul>
+
+			<ul class="default">
+				<li><img src="img/logo1.png" alt="logo" id="logo"></li>
+				<li class=hide-mobile><a href="index.html">Home</a></li>
+				<li class=hide-mobile><a href="servico.html">Serviços</a></li>
+				<li class=hide-mobile><a href="diferencial.html">Nosso Diferencial</a></li>
+				<li class=hide-mobile><a href="importancia.html">Importância</a></li>
+				<li class=hide-mobile><a href="contato.html">Contato</a></li>
+				<li class="menu-button" onclick="showSideBar()"><img id="nav-icon" src="img/menu-icon.png"></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Vamos conversar?</h1>
+		<p>Entre em contato conosco! Nosso suporte estará disponível para responder suas dúvidas.</p>
+		<div class="maior">
+			<div class="formulario">
+				<p>Nos envie sua pergunta!</p>
+				<form>
+					<input type="text" name="nome" id="nome" placeholder="Nome">
+					<input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+					<br>
+
+					<input type="text" name="email" id="email" placeholder="email@email.com">
+					<br>
+
+					<input class="duvida" type="text" name="duvida" id="duvida" placeholder="Sua dúvida">
+				</form>
+				<p class="botao"><a href="Obrigado.html">ENVIAR</a></p>
+      
+			</div>
+
+			<div class="info">
+				<h2>Nossas informações: </h2>
+				<ul>
+					<li>Telefone: (49) 9 8765-4321</li>
+					<li>Email: residuozero@hotmail.com</li>
+					<li>Horários: Segunda à Sexta, das 08h30 às 18h30</li>
+					<li>Endereço: Rua Lírio do Vale, Centro, 456, Videira-SC</li>
+				</ul>
+			</div>
+
+		</div>
+	</main>
+
+	<footer>
+		<div class="follow">
+			<h3>Nossas redes</h3>
+      <a href="https://www.facebook.com/vilcar.esquadriad" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://br.linkedin.com/in/wsantosdev/pt" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/elonmusk" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/vilcar_esquadrias/" target="_blank"><i class="fab fa-instagram"></i></a>
+		</div>
+
+		<div class="copyright">
+			<p>Copyright © 2024 Resíduo Zero </p>
+		</div>
+	</footer>
+
+</html>

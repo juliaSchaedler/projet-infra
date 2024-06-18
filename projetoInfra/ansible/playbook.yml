@@ -1,0 +1,52 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Ensure Docker is running
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Build frontend container
+      community.general.docker_image:
+        build:
+          path: ../frontend
+        name: myfrontend
+
+    - name: Run frontend container
+      community.general.docker_container:
+        name: frontend
+        image: myfrontend
+        state: started
+        ports:
+          - "80:80"
+        networks:
+          - name: net
+
+    - name: Build backend container
+      community.general.docker_image:
+        build:
+          path: ../backend
+        name: mybackend
+
+    - name: Run backend container
+      community.general.docker_container:
+        name: backend
+        image: mybackend
+        state: started
+        networks:
+          - name: net
+
+    - name: Build database container
+      community.general.docker_image:
+        build:
+          path: ../database
+        name: mydatabase
+
+    - name: Run database container
+      community.general.docker_container:
+        name: database
+        image: mydatabase
+        state: started
+        networks:
+          - name: net

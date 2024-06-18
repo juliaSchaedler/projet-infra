@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+/*Predefinições*/
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-image: linear-gradient(to bottom, #EEEFED, #C5D6BA);
+  color: #1C251A;
+}
+
+body a {
+  color: white;
+  text-decoration: none;
+}
+
+main div {
+	display:flex;
+}

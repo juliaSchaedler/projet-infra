@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
+/*Predefinições*/
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background-image: linear-gradient(to bottom, #EEEFED, #C5D6BA);
+	color: #1C251A;
+}
+
+body a {
+	color: white;
+	text-decoration: none;
+}
+
+/*Section banner*/
+section.banner {
+	background: url(../img/img-banner.png) no-repeat right;
+	background-size: 40vw;
+	padding: 8vw 10vw ;
+	color: #1C251A;
+	margin-right: 10vw;
+	display: flex;
+	flex-direction: column;
+}
+
+section.banner h3 {
+	text-align: justify;
+	padding: 6vw 2vw 0.5vw 1vw;
+	font-size: clamp(2em, 3em, 4em);
+}
+
+section.banner h2 {
+	padding: 0.5vw 2vw 2vw 1vw;
+	font-size: clamp(2.5em, 3.5em, 4.5em);
+	font-weight: bold;
+}
+
+section.banner>p {
+	padding-left: 1vw;
+	padding-bottom: 1.5vw;
+	font-size: clamp(1em, 1.5em, 2em);
+	width: 45%;
+}
+
+section.banner p a {
+	text-align: center;
+	background: #2c6e49;
+	border-radius: 5px;
+	padding: 10px 30px 10px 40px;
+	margin: 3vw 1vw 1vw 0vw;
+	white-space: nowrap;
+}
+
+@media(max-width: 1000px) {}
+
+/*section gestao*/
+
+section.gestao {
+	padding: 5vw 10vw 5vw 10vw;
+	text-align: center;
+}
+
+section.gestao h2 {
+	font-size: clamp(2em, 3em, 4em);
+	padding: 1vw 3vw 2vw 3vw;
+}
+
+section.gestao>p {
+	font-size: clamp(1em, 1.5em, 2em);
+	padding: 1vw 5vw 3vw 5vw;
+}
+
+section.gestao div {
+	display: flex;
+	padding: 1vw 1vw 4vw 1vw;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+section.gestao div figure {
+	padding: 4vw 1vw 4vw 1vw;
+	border-radius: 1vw;
+	border-color: #2c6e49;
+	border-style: dashed;
+	border-width: 2px;
+	text-align: center;
+	margin: 10px;
+	width: 300px;
+}
+
+section.gestao div figure img {
+	width: 100px;
+}
+
+section.gestao div figure figcaption {
+	padding: 1vw 1vw 1vw 1vw;
+	font-size: clamp(1em, 1.25em, 1.5em);
+	font-weight: bold;
+}
+
+section.gestao div figure p {
+	font-size: clamp(1em, 1.5em, 2em);
+	text-align: justify;
+	padding: 1vw 1vw 1vw 1vw;
+}
+
+/*section diferencial*/
+
+section.diferencial {
+	padding: 1vw 10vw 8vw 10vw;
+	text-align: center;
+}
+
+section.diferencial h2 {
+	font-size: clamp(2em, 4em, 6em);
+	padding: 1vw 1vw 2vw 1vw;
+}
+
+section.diferencial>p {
+	padding: 1vw 5vw 3vw 5vw;
+	font-size: clamp(1em, 2em, 3em);
+}
+
+section.diferencial img {
+	padding: 1vw 3vw 1vw 3vw;
+	max-width: 100%;
+}
+
+/*section blog*/
+
+section.blog {
+	padding: 1vw 3vw 3vw 3vw;
+	text-align: center;
+}
+
+section.blog h2 {
+	padding: 1vw 1vw 2vw 1vw;
+	font-size: clamp(2em, 3em, 4em);
+}
+
+section.blog>p {
+	padding: 1vw 1vw 3vw 1vw;
+	font-size: clamp(1em, 2em, 3em);
+}
+
+section.blog div {
+	display: flex;
+	padding: 1vw 2vw 4vw 2vw;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+section.blog div figure {
+	padding: 3vw;
+	border-radius: 1vw;
+	border-color: #2c6e49;
+	border-style: dashed;
+	border-width: 2px;
+	text-align: center;
+	margin: 10px;
+	width: 300px;
+}
+
+section.blog div figure figcaption {
+	color: #1C251A;
+	font-size: clamp(1.5em, 2em, 3em);
+	font-weight: bold;
+}
+
+section.blog div figure img {
+	width: 100%;
+}
+
+section.blog div figure p {
+	padding-top: 2vw;
+	font-size: clamp(0.8em, 1.5em, 2em);
+	text-align: center;
+}
+
+
+section.blog div figure p a {
+	background: #2c6e49;
+	border-radius: 5px;
+	padding: 1vw;
+}
+
