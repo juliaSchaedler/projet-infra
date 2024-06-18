@@ -1,18 +1,19 @@
-#imagem base do Python
-FROM python:3.9
+FROM python:3.9-slim
 
-#diretório de trabalho
+# Diretório de trabalho
 WORKDIR /app
 
-#instale as dependências
-COPY requirements.txt .
+# Copia os arquivos de requisitos
+COPY requirements.txt requirements.txt
+
+# Instala as dependências
 RUN pip install -r requirements.txt
 
-#Copie o código da aplicação
-COPY app /app
+# Copia o código da aplicação
+COPY app app
 
-#Exponha a porta 5000
-EXPOSE 5000
+# Define a variável de ambiente para Flask
+ENV FLASK_APP=app/main.py
 
-#Comando para iniciar a aplicação
-CMD ["python", "main.py"]
+# Comando para rodar a aplicação
+CMD ["flask", "run", "--host=0.0.0.0"]
