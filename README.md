@@ -17,25 +17,29 @@ Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de I
 
 ## Comandos essenciais para executar o projeto:
 1. Criando a rede "net"
-sudo docker network create net
+
+- sudo docker network create net
 
 2. Rodando o contêiner Frontend:
-sudo docker build -t myfrontend ./frontend
-sudo docker run -d --name frontend --network net -p 80:80 myfrontend
+   
+- sudo docker build -t myfrontend ./frontend
+- sudo docker run -d --name frontend --network net -p 80:80 myfrontend
 
 3. Rodando o contêiner Backend:
-sudo docker build -t mybackend ./backend
-sudo docker run -d --name backend --network net mybackend
+   
+- sudo docker build -t mybackend ./backend
+- sudo docker run -d --name backend --network net mybackend
 
 4. Rodando o contêiner Database:
-sudo docker build -t mydatabase ./database
-sudo docker run -d --name database --network net mydatabase
+   
+- sudo docker build -t mydatabase ./database
+- sudo docker run -d --name database --network net mydatabase
 
 5. Rodando o Ansible:
-sudo ansible-playbook playbook.yml //no diretório "ansible"
-sudo ansible-playbook ansible/playbook.yml //no diretório "projeto-infra"
+    
+- sudo ansible-playbook playbook.yml //no diretório "ansible"
+- sudo ansible-playbook ansible/playbook.yml //no diretório "projeto-infra"
 
-6. Acessando a página Web:
-http://localhost
+6. Acessando a página Web: http://localhost
 
 
