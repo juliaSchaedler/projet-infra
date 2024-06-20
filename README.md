@@ -2,7 +2,8 @@
 Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de Infraestrutura e Serviços Web.
 
 ## Estrutura do projeto:
-![O projeto utilizado pode ser encontrado aqui: https://replit.com/@JuliaSchaedler/TrabalhoIHM](estruturaProjInfra.png)
+![estrutura](estruturaProjInfra.png)
+- O trabalho web pode ser encontrado, completo, aqui: https://replit.com/@JuliaSchaedler/TrabalhoIHM#index.html
 
 ## Como funciona este projeto?
 ![Diagrama de requisições](diagramaReq.png)
@@ -13,9 +14,21 @@ Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de I
 
 ## Requisitos:
 - Docker
+  -  sudo apt install -y docker.io
+  -  sudo systemctl start docker
+  -  sudo systemctl enable docker
 - Ansible
+  -  sudo apt install -y ansible
 
-## Comandos essenciais para executar o projeto:
+## Comandos para executar o projeto:
+### Essenciais
+1. Deletando os contêiners: sudo docker rm -f frontend backend database
+2. Verificando contêiners ativos: sudo docker ps
+3. Verificando redes ativas: sudo docker network ls
+4. Verificando imagens: sudo docker images
+
+
+### Buildando e rodando manualmente os contêiners:
 1. Criando a rede "net"
 
 - sudo docker network create net
@@ -35,10 +48,12 @@ Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de I
 - sudo docker build -t mydatabase ./database
 - sudo docker run -d --name database --network net mydatabase
 
-5. Rodando o Ansible:
+### Automatizando com Ansible
+1. Rodando o Ansible:
     
-- sudo ansible-playbook playbook.yml //no diretório "ansible"
-- sudo ansible-playbook ansible/playbook.yml //no diretório "projeto-infra"
+- sudo ansible-playbook playbook.yml        (no diretório "ansible")
+- sudo ansible-playbook ansible/playbook.yml        (no diretório "projeto-infra)
 
-6. Acessando a página Web: http://localhost
+### Acessando o site:
+- http://localhost
 
