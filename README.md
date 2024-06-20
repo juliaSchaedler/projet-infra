@@ -6,7 +6,7 @@ Aplicação Web Simples com Contêineres Docker e Ansible para a disciplina de I
 - O trabalho web pode ser encontrado, completo, aqui: https://replit.com/@JuliaSchaedler/TrabalhoIHM#index.html
 
 ## Como funciona este projeto?
-![Diagrama de requisições](diagramaReq.png)
+![Diagrama de requisições](projeto.png)
 - Os contêiners rodam de forma separada e se comunicam através de uma mesma rede.
 - O usuário requisita a aplicação Web por algum navegador, usando HTTP, e o frontend recebe esta requisição e processa a lógica da interface, fazendo outras requisições para o backend para obter dados.
 - Já o backend recebe esta requisição do frontend, processa a lógica de negócio, acessa o banco de dados para buscar/armazenar algo, e retorna a resposta HTTP para frontend.
